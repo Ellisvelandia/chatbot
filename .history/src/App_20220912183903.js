@@ -1,5 +1,5 @@
 import "./App.css";
-import image from "./img/bot_image.jpg";
+import image from './img/bot_image.jpg'
 
 function App() {
   return (
@@ -24,18 +24,9 @@ function App() {
             </div>
           </div>
           <div className="bottom">
-            <div className="btm">
+            <div className="btn">
               <div className="input">
-                <input
-                  type="text"
-                  id="input"
-                  placeholder="Enter your message"
-                />
-                <div className="div btn">
-                  <button>
-                    <i class="fa fa-paper-plane"></i>Send
-                  </button>
-                </div>
+                <input type="text" id="" />
               </div>
             </div>
           </div>

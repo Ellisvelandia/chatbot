@@ -26,15 +26,9 @@ function App() {
           <div className="bottom">
             <div className="btm">
               <div className="input">
-                <input
-                  type="text"
-                  id="input"
-                  placeholder="Enter your message"
-                />
+                <input type="text" id="input" placeholder="Enter your message"/>
                 <div className="div btn">
-                  <button>
-                    <i class="fa fa-paper-plane"></i>Send
-                  </button>
+
                 </div>
               </div>
             </div>

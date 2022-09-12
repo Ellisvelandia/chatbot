@@ -32,9 +32,7 @@ function App() {
                   placeholder="Enter your message"
                 />
                 <div className="div btn">
-                  <button>
-                    <i class="fa fa-paper-plane"></i>Send
-                  </button>
+                  <button>Send</button>
                 </div>
               </div>
             </div>
