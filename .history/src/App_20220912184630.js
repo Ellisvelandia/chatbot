@@ -31,11 +31,11 @@ function App() {
                   id="input"
                   placeholder="Enter your message"
                 />
-              </div>
-              <div className="btn">
-                <button>
-                  <i class="fa fa-paper-plane"></i>Send
-                </button>
+                <div className="btn">
+                  <button>
+                    <i class="fa fa-paper-plane"></i>Send
+                  </button>
+                </div>
               </div>
             </div>
           </div>
