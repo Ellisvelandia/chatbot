@@ -37,10 +37,10 @@ function App() {
     "November",
     "December",
   ];
-  const [time, setTime] = useState(`${hours}:${seconds}`);
+  const [time, setTime] = useState(`${hours}:${seconds}`); 
   const [dateTime, setDateTime] = useState(
     `${days[day]}, ${months[month]} ${year}`
-  );
+  ); 
 
   const checkStatus = (e) => {
     let isActive = true;
@@ -49,6 +49,7 @@ function App() {
     }
     const status = document.querySelector(".status");
     if (isActive === true) {
+      //if the bot is active
       status.innerHTML = "Active";
       status.style.color = "green";
     } else {
@@ -68,7 +69,7 @@ function App() {
     if (words.test(document.querySelector("#input").value)) {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
-        getBotMessage.innerText = "Please do not use bad words";
+        getBotMessage.innerText = "Please do not use bad words"; 
       }, 2000);
     }
     let welcome = [
@@ -77,12 +78,13 @@ function App() {
     let words2 = new RegExp(welcome);
     if (words2.test(document.querySelector("#input").value)) {
       const status = document.querySelector(".status");
+      // if the input contains welcome words
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
-        getBotMessage.innerText = "Hello There how are you doing today?";
+        getBotMessage.innerText = "Hello There how are you doing today?"; // display the message
         status.innerText = "Active";
         status.style.color = "green";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
     let bye = ["bye|Bye|goodbye|see you later|cya|goodnight|goodbye"];
@@ -92,7 +94,7 @@ function App() {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText = "Bye, have a nice day";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
       setTimeout(() => {
         status.innerText = "Not active";
@@ -107,7 +109,7 @@ function App() {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText = "You are welcome";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
     let how = [
@@ -121,7 +123,7 @@ function App() {
         getBotMessage.innerText = "I am fine, thank you";
         status.innerText = "Active";
         status.style.color = "green";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
     let good = [
@@ -132,7 +134,7 @@ function App() {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText = "😁";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 1000);
     }
 
@@ -144,7 +146,7 @@ function App() {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText = "That is good";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
 
@@ -156,7 +158,7 @@ function App() {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText = "My name is Bot";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
 
@@ -168,7 +170,7 @@ function App() {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText = "The owner of this bot is Treasure";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
 
@@ -181,22 +183,23 @@ function App() {
       setTimeout(() => {
         getBotMessage.innerText =
           "Treasure is a programmer based on ReactJS and NodeJS he is the owner of a youtube channel called Creative Tutorials";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
 
     let ageAsk = [
       "What's your age|what's your age|What is your age|what is your age|How old are you|how old are you",
-    ];
+    ]; //adding the age-question
     let words11 = new RegExp(ageAsk);
     if (words11.test(document.querySelector("#input").value)) {
+      // if the input contains some question
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText = "I am 1 year old";
-        inputRef.value = "";
+        inputRef.value = ""; // clear the input
       }, 2000);
     }
-    getHumanMessage.innerText = inputRef.value;
+    getHumanMessage.innerText = inputRef.value; // display the message
   };
 
   return (
