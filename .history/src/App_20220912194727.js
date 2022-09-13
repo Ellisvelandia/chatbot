@@ -1,8 +1,9 @@
 import "./App.css";
 import image from "./img/bot_image.jpg";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 function App() {
+
   const humanMessage = useRef();
   const botmessage = useRef();
   const input = useRef();

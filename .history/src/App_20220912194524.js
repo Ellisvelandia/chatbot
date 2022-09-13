@@ -1,12 +1,8 @@
 import "./App.css";
 import image from "./img/bot_image.jpg";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 function App() {
-  const humanMessage = useRef();
-  const botmessage = useRef();
-  const input = useRef();
-
   const date = new Date();
   const hours = date.getHours();
   const seconds = date.getSeconds();
@@ -222,16 +218,8 @@ function App() {
           <div className="main">
             <div className="main_content">
               <div className="messages">
-                <div
-                  className="bot-message"
-                  id="message1"
-                  ref={botmessage}
-                ></div>
-                <div
-                  className="human-message"
-                  id="message2"
-                  ref={humanMessage}
-                ></div>
+                <div className="bot-message" id="message1" ref></div>
+                <div className="human-message" id="message2"></div>
               </div>
             </div>
           </div>
@@ -242,7 +230,6 @@ function App() {
                   type="text"
                   id="input"
                   placeholder="Enter your message"
-                  ref={input}
                 />
               </div>
               <div className="btn">
